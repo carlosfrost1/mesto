@@ -1,0 +1,22 @@
+.header {
+    max-width: 880px;
+    min-height: 74px;
+    margin: 45px auto 40px;
+    border-bottom: solid 1px #545454;
+}
+
+@media screen and (max-width: 1000px) {
+    .header {
+        max-width: 680px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .header {
+        max-width: 480px;
+        min-height: 55px;
+        margin-top: 28px;
+        margin-bottom: 42px;
+    }
+}
+
