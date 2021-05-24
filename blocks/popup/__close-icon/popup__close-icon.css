@@ -9,7 +9,7 @@
 
 .popup__close-icon:hover {
     opacity: 60%;
-    transition: opacity linear 0.5s;;
+    transition: opacity linear 0.5s;
 }
 
 @media screen and (max-width: 530px) {

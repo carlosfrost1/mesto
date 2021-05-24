@@ -7,6 +7,6 @@
     .footer {
         margin-left: 19px;
         margin-right: 19px;
-        max-width: calc(100%-38px);
+        max-width: calc(100% - 38px);
     }
 }
