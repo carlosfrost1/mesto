@@ -8,18 +8,18 @@
 </head>
 <body class='body'>
   <header class='header'>
-    <a class='header__logo-link' href='./'><img src='../mesto/images/header__logo.png' class='header__logo' href='/'></a>
+    <a class='header__logo-link' href='./'><img src='../mesto/images/header__logo.png' class='header__logo' alt='лого'></a>
   </header>
   <main class='main-container'>
     <section class='popup'>
       <div class='popup__overlay'>
-        <div class='popup__container'>
+        <form class='popup__container' name='edit form'>
           <h2 class='popup__header'>Редактировать профиль</h2>
           <img src='./images/popup__close-icon.svg' class='popup__close-icon' alt='закрыть'>
           <input class='popup__input-name' value="">
           <input class='popup__input-description' value="">
-          <button class='popup__submit-button' type="button"><p class='popup__button-text'>Сохранить</p></button>
-        </div>
+          <button class='popup__submit-button' type="submit">Сохранить</button>
+        </form>
       </div>
     </section>
     <section class='profile'>
