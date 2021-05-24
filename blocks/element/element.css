@@ -14,4 +14,7 @@
         height: 361px;
 
     }
+    .element:last-child {
+        margin-bottom: 0;
+    }
 }

@@ -9,8 +9,5 @@
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
-}
-
-/* div, ul, li, h2, h3, p, section, footer {
-    border: solid 1px red;
+    position: relative;
 }

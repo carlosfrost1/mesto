@@ -6,9 +6,11 @@
     border: solid 1px #FFFFFF;
     box-sizing: border-box;
     margin: 35px 0 35px 0;
+    cursor: pointer;
 }
 .profile__add-button:hover {
     opacity: 60%;
+    transition: opacity linear 0.5s;
 }
 
 @media screen and (max-width: 700px) {
