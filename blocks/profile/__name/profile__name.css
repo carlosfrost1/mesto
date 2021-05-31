@@ -4,15 +4,16 @@
     line-height: 1.14286;
     color: #FFFFFF;
     margin: 22px 18px 16px 0;
-    height: 39px;
     width: 294px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 700px) {
     .profile__name {
         font-size: 27px;
         line-height: 1.21037;
-        height: 26px;
         max-width: 189px;
     }
 }
@@ -20,7 +21,6 @@
 @media screen and (max-width: 600px) {
     .profile__name {
         margin-left: 75px;
-        height: 26px;
         width: 189px;
         margin: 0px 10px 14px 46px;
     }
