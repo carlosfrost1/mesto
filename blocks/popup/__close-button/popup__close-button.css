@@ -5,7 +5,7 @@
     right: -40px;
     top: -40px;
     cursor: pointer;
-    background-color: #000000;
+    background-color:transparent;
     border: none;
     background-image: url('../../../images/popup__close-icon.svg');
     background-position: center;
