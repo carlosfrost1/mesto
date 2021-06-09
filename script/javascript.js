@@ -60,13 +60,13 @@ const initialCards = [
     popupInputDescription.value = profileDescription.textContent;
  };
 
+ function openPopup (popup) {
+   popup.classList.add('popup_opened');
+};
+ 
  function closePopup (popup) {
    popup.classList.remove('popup_opened');
 };
-
- function openPopup (popup) {
-    popup.classList.add('popup_opened');
- };
 
  function openEditPopup () {
    openPopup(popupEditProfile);
