@@ -1,11 +1,11 @@
 const editButton = document.querySelector('.profile__edit-button');
+const popupEditProfile = document.querySelector('.popup_edit-profile');
 const profileName = document.querySelector('.profile__name');
 const profileDescription = document.querySelector('.profile__desription');
 const popupClose = document.querySelector('.popup__close-button');
 const popupInputName = document.querySelector('.popup__input_js_name');
 const popupInputDescription = document.querySelector('.popup__input_js_description');
 const popup = document.querySelector('.popup');
-const popupEditProfile = document.querySelector('popup_edit-profile');
 const formEditProfile = document.querySelector('.popup__form');
 
 const openPopupAddButton = document.querySelector('.profile__add-button');
@@ -55,11 +55,11 @@ const initialCards = [
    
  ];
 
-function writePopup () {
+ function writePopup () {
     popupInputName.value = profileName.textContent;
     popupInputDescription.value = profileDescription.textContent;
  };
- 
+
  function openPopup (popup) {
     popup.classList.add('popup_opened');
  };
@@ -72,7 +72,7 @@ function writePopup () {
    openPopup(popupEditProfile);
    writePopup();
 };
- 
+
  function formSaveProfileInfo (evt) {
     evt.preventDefault();
     profileName.textContent = popupInputName.value;
@@ -80,21 +80,20 @@ function writePopup () {
     closePopup ();
  };
  
-//Добавить карточки при загрузки страинцы
-function addCardInElements () {
+ function addCardInElements () {
    initialCards.forEach(item => {
      fillCard(createCard(item.name, item.link));
   })
 }; 
   
-//Записать карточку
-function createCard (name, link) {
+ function createCard (name, link) {
   const card = addNewCards.querySelector('.element').cloneNode(true);
   const title = card.querySelector('.element__name');
   const cardImg = card.querySelector('.element__image');
   title.textContent = name;
   cardImg.src = link;
   cardImg.alt = name;
+
   cardImg.addEventListener('click', function(evt){
      openPopup(popupPlacePhoto);
      const event = evt.target;
@@ -111,15 +110,13 @@ function createCard (name, link) {
   return card
 };
 
-//Добавить карточку в блок places
-function fillCard(card) {
+ function fillCard(card) {
    placesContent.append(card);
 };
   
 addCardInElements();
 
-// Записать карточку и очистить форму 
-function closePopupAddPlace (evt) {
+ function closePopupAddPlace (evt) {
    evt.preventDefault();
    fillCard(createCard(popupAddPlaceName.value, popupAddPlaceImgLink.value));
    popupAddPlaceName.value = '';
@@ -127,12 +124,12 @@ function closePopupAddPlace (evt) {
    closePopup(popupAddPlace);
 };
 
- editButton.addEventListener('click', openEditPopup); 
- closeEditPopup.addEventListener('click', closePopup);
- formEditProfile.addEventListener('submit', formSaveProfileInfo);
-
  openPopupAddButton.addEventListener('click', () => openPopup(popupAddPlace));
  closeAddPlace.addEventListener('click', () => closePopup(popupAddPlace));
  formAddPlace.addEventListener('submit', closePopupAddPlace);
+
+ editButton.addEventListener('click', openEditPopup); 
+ closeEditPopup.addEventListener('click', () => closePopup(popupEditProfile));
+ formEditProfile.addEventListener('submit', formSaveProfileInfo);
 
  closePlacePhoto.addEventListener('click', () => closePopup(popupPlacePhoto));
