@@ -77,7 +77,7 @@ const initialCards = [
     evt.preventDefault();
     profileName.textContent = popupInputName.value;
     profileDescription.textContent = popupInputDescription.value;
-    closePopup ();
+    closePopup (popupEditProfile);
  };
  
  function addCardInElements () {
