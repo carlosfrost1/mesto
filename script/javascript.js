@@ -98,7 +98,7 @@ const initialCards = [
      openPopup(popupPlacePhoto);
      const event = evt.target;
      popupPlacePhotoImage.src = event.src;
-     const cardText = cardImg.closest('.element').querySelector('.element__title');
+     const cardText = cardImg.closest('.element').querySelector('.element__name');
      popupPlacePhotoText.textContent = cardText.textContent;
   });
 
