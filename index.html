@@ -11,17 +11,7 @@
     <a class="header__logo-link" href="#"><img src="./images/header__logo.svg" class="header__logo" alt="лого"></a>
   </header>
   <main class="main-container">
-    <section class="popup">
-      <div class="popup__container">
-        <h2 class="popup__header">Редактировать профиль</h2>
-        <button class="popup__close-button" type="button"></button>
-        <form class="popup__form" name="edit form">
-          <input class="popup__input popup__input_js_name" value="" placeholder="Введите имя">
-          <input class="popup__input popup__input_js_description" value="" placeholder="Введите профессию">
-          <button class="popup__submit-button" type="submit">Сохранить</button>
-        </form>
-      </div>
-    </section>
+
     <section class="profile">
       <div class="profile__all-info">
         <div class="profile__avatar"></div>
@@ -36,41 +26,47 @@
       </button>
     </section>
     <section class="elements">
-      <div class="element">
-        <img class="element__image" src="./images/karachaevsk.jpg" alt="карачаевск">
-        <h2 class="element__name">Карачаевск</h2>
-        <button class="element__like" type="button"></button>
-      </div>
-      <div class="element">
-        <img class="element__image" src="./images/elbrus.jpg" alt="эльбрус">
-        <h2 class="element__name">Гора Эльбрус</h2>
-        <button class="element__like" type="button"></button>
-      </div>
-      <div class="element">
-        <img class="element__image" src="./images/dombai.jpg" alt="домбай">
-        <h2 class="element__name">Домбай</h2>
-        <button class="element__like" type="button"></button>
-      </div>
-      <div class="element">
-        <img class="element__image" src="./images/elbrus.jpg" alt="эльбрус">
-        <h2 class="element__name">Гора Эльбрус</h2>
-        <button class="element__like" type="button"></button>
-      </div>
-      <div class="element">
-        <img class="element__image" src="./images/dombai.jpg" alt="домбай">
-        <h2 class="element__name">Домбай</h2>
-        <button class="element__like" type="button"></button>
-      </div>
-      <div class="element">
-        <img class="element__image" src="./images/karacjaevo-cher.jpg" alt="карачаево-черкессия">
-        <h2 class="element__name">Карачаево-Черкессия</h2>
-        <button class="element__like" type="button"></button>
-      </div>
-    </section>
   </main>
  <footer class="footer">
   <p class="footer__text">&copy; 2020 Mesto Russia</p>
  </footer>
+ <section class="popup popup_edit-profile">
+  <div class="popup__container">
+    <h2 class="popup__header">Редактировать профиль</h2>
+    <button class="popup__close-button popup__close-button_edit-profile" type="button"></button>
+    <form class="popup__form" name="edit form">
+      <input class="popup__input popup__input_js_name" value="" placeholder="Введите имя">
+      <input class="popup__input popup__input_js_description" value="" placeholder="Введите профессию">
+      <button class="popup__submit-button" type="submit">Сохранить</button>
+    </form>
+  </div>
+</section>
+<section class="popup popup_add-place">
+  <div class="popup__container">
+    <h2 class="popup__header">Новое место</h2>
+    <button class="popup__close-button popup__close-button_add-place" type="button"></button>
+    <form class="popup__form popup__form_add-place" name="edit form">
+      <input class="popup__input popup__input_js_place-name" value="" placeholder="Название">
+      <input class="popup__input popup__input_js_place-img" value="" placeholder="Ссылка на картинку">
+      <button class="popup__submit-button" type="submit">Сохранить</button>
+    </form>
+  </div>
+</section>
+<section class="popup popup_place-image">
+  <div class="popup__container popup__container_place-image">
+    <button class="popup__close-button popup__close-button_place-image" type="button"></button>
+    <img src="_" class="popup__image" alt>
+    <p class="popup__text"></p>
+  </div>
+</section>
+<template class="template__add-places">
+  <div class="element">
+    <button type="button" class="element__delete-button"></button>
+    <img class="element__image" src="_" alt>
+    <h2 class="element__name"></h2>
+    <button class="element__like" type="button"></button>
+  </div>
+</template>
  <script src="./script/javascript.js"></script>
 </body>
 </html>
