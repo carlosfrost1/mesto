@@ -13,4 +13,6 @@
 
 .element__delete-button:hover {
     cursor: pointer;
+    opacity: 60%;
+    transition: opacity linear 0.5s;
 }
