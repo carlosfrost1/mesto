@@ -92,17 +92,13 @@ const initialCards = [
   const cardImg = card.querySelector('.element__image');
   title.textContent = name;
   cardImg.src = link;
-  cardImg.alt = name; // Добавляет альтернативный текст
+  cardImg.alt = name;
 
-  cardImg.addEventListener('click', function(evt){
+  cardImg.addEventListener('click', function(){
      openPopup(popupPlacePhoto);
-     const event = evt.target;
-     popupPlacePhotoImage.src = event.src; // Максим, добрый день, вы мне тут оставили комментарий, о реализации alt у картинки. Парой строчек выше
-                                           // есть код, который добавляет данный атрибут. Если добавить карточку с названием, но без ссылки, название
-                                           // поместится в alt. Если вы имеете ввиду другой метод, намекните пожалуйста какой и как это можно реализовать
-                                           // Спасибо за ревью, хорошего дня)
-     const cardText = cardImg.closest('.element').querySelector('.element__name');
-     popupPlacePhotoText.textContent = cardText.textContent;
+     popupPlacePhotoImage.src = link;
+     popupPlacePhotoImage.alt = name;
+     popupPlacePhotoText.textContent = name;
   });
 
   const likeButton = card.querySelector('.element__like');
