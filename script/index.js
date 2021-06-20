@@ -101,7 +101,7 @@ const initialCards = [
    writePopup();
  };
 
- function formSaveProfileInfo (evt) {
+ function saveFromProfileInfo (evt) {
     evt.preventDefault();
     profileName.textContent = popupInputName.value;
     profileDescription.textContent = popupInputDescription.value;
@@ -153,12 +153,12 @@ const initialCards = [
    }
  };
 
- openPopupAddButton.addEventListener('click', () => openPopup(popupAddPlace));
+ openPopupAddButton.addEventListener('click', () => openPopupAddCard(popupAddPlace));
  closeAddPlace.addEventListener('click', () => closePopup(popupAddPlace));
  formAddPlace.addEventListener('submit', closePopupAddPlace);
 
  editButton.addEventListener('click', openEditPopup); 
  closeEditPopup.addEventListener('click', () => closePopup(popupEditProfile));
- formEditProfile.addEventListener('submit', formSaveProfileInfo);
+ formEditProfile.addEventListener('submit', saveFromProfileInfo);
 
  closePlacePhoto.addEventListener('click', () => closePopup(popupPlacePhoto));
